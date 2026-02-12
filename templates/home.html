@@ -66,9 +66,13 @@
 <!-- JavaScript -->
 <script>
 function openMenu() {
-    document.getElementById("sideMenu").style.width = "250px";
+    document.getElementById("sideMenu").style.width = "100%"; /* full screen */
 }
 
+function closeMenu() {
+    document.getElementById("sideMenu").style.width = "0";     /* hide */
+}
+</script>
 function closeMenu() {
     document.getElementById("sideMenu").style.width = "0";
 }
@@ -76,3 +80,4 @@ function closeMenu() {
 
 </body>
 </html>
+
