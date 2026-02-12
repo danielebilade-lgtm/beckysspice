@@ -52,7 +52,7 @@ body {
     display: block;
     padding: 18px 25px;
     font-size: 18px;
-    color: #28363D; /* dark blue for menu text */
+    color: #6D0100; /* changed from blue to dark red */
     text-decoration: none;
     text-align: left;
     border: none;
@@ -91,7 +91,7 @@ section {
 
 section h3 {
     text-align: center;
-    color: #28363D; /* dark blue headings */
+    color: #6D0100; /* changed from blue to dark red */
 }
 
 .card-container {
@@ -122,7 +122,7 @@ section h3 {
 
 .card h4 {
     margin: 10px 0 5px 0;
-    color: #28363D; /* dark blue titles */
+    color: #6D0100; /* changed from blue to dark red */
 }
 
 .card p {
@@ -136,7 +136,7 @@ section h3 {
 
 /* ---------------- FOOTER ---------------- */
 footer {
-    background-color: #28363D; /* dark blue footer */
+    background-color: #6D0100; /* changed from blue to dark red */
     color: white;
     padding: 15px;
     border-radius: 15px 15px 0 0;
@@ -153,4 +153,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
+    }
