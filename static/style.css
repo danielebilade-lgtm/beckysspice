@@ -3,8 +3,8 @@ body {
     font-family: sans-serif;
     background-color: #fff6f0;
     margin: 0;
-    text-align: center;
     color: #6D0100;
+    text-align: center; /* homepage content still centered */
 }
 
 /* HEADER */
@@ -37,18 +37,18 @@ header {
     border-left: 2px solid #6D0100; /* outline */
     overflow-x: hidden;
     transition: width 0.4s;
-    z-index: 1000; /* on top */
+    z-index: 1000; /* above all content */
+    text-align: left; /* prevent body center affecting sidebar */
+    padding-top: 80px; /* space for close button */
 }
 
-/* REMOVE flex from side-menu */
+/* SIDEBAR LINKS */
 .side-menu a {
     display: block;
-    padding: 20px 0;
+    padding: 20px 40px; /* left padding for nicer spacing */
     font-size: 24px;
     color: #6D0100;
     text-decoration: none;
-    width: 100%;
-    text-align: center;
     border-bottom: 1px solid #6D0100;
     transition: background 0.3s;
 }
@@ -80,6 +80,70 @@ header {
     color: white;
 }
 
+/* SECTION */
+section {
+    padding: 30px 20px;
+}
+
+/* CARD CONTAINER */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* CARD */
+.card {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* CARD IMAGE */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* CARD TEXT */
+.card h4 {
+    margin: 10px 0 5px 0;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+/* CARD HOVER */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+    background-color: #6D0100;
+    color: white;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 /* SECTION */
 section {
     padding: 30px 20px;
@@ -254,4 +318,5 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     }
+
 
