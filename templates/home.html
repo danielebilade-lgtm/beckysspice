@@ -3,75 +3,239 @@
 <head>
     <title>Becky's Spice</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* ---------------- BODY ---------------- */
+        body {
+            font-family: sans-serif;
+            background-color: #fff6f0;
+            margin: 0;
+            color: #6D0100;
+        }
+
+        /* ---------------- TOP HEADER (sticky) ---------------- */
+        .top-header {
+            background-color: #6D0100;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .top-header .brand {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .menu-icon {
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* ---------------- SECOND HEADER (scrollable) ---------------- */
+        .main-header {
+            background-color: #fff6f0;
+            color: #6D0100;
+            padding: 40px 20px 20px 20px;
+        }
+
+        .main-header .motto {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+        }
+
+        .main-header .quote {
+            font-size: 18px;
+            font-style: italic;
+            margin: 0;
+            color: #8C2B1F;
+        }
+
+        /* ---------------- SIDE MENU ---------------- */
+        .side-menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fff6f0;
+            border-left: 2px solid #6D0100;
+            overflow-x: hidden;
+            transition: width 0.4s;
+            z-index: 1001;
+            padding-top: 60px;
+        }
+
+        .side-menu a {
+            display: block;
+            padding: 20px;
+            font-size: 24px;
+            color: #6D0100;
+            text-decoration: none;
+            border-bottom: 1px solid #6D0100;
+        }
+
+        .side-menu a:hover {
+            background-color: #f3d4cd;
+        }
+
+        /* CLOSE BUTTON */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+            color: #6D0100;
+            background-color: white;
+            border: 2px solid #6D0100;
+            cursor: pointer;
+            z-index: 1002;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .close-btn:hover {
+            background-color: #6D0100;
+            color: white;
+        }
+
+        /* ---------------- SECTION ---------------- */
+        section {
+            padding: 30px 20px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .card h4 {
+            margin: 10px 0 5px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            background-color: #6D0100;
+            color: white;
+            padding: 15px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <div class="header-left">
-        <h1>Becky's Spice</h1>
-        <p class="motto">A Taste of Heart ❤️</p>
-        <p class="quote">“Baking happiness, one bite at a time.”</p>
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="brand">Becky's Spice</div>
+        <div class="menu-icon" onclick="openMenu()">☰</div>
     </div>
 
-    <!-- Menu Icon -->
-    <div class="menu-icon" onclick="openMenu()">☰</div>
-</header>
-
-<!-- Top Sliding Menu -->
-<div id="topMenu" class="top-menu">
-    <!-- Close Button -->
-    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
-
-    <!-- Menu Links -->
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-</div>
-
-<section>
-    <h3>Our Specialties</h3>
-    <div class="card-container">
-        <div class="card">
-            <img src="{{ url_for('static', filename='images/birthday.jpg') }}" alt="Birthday Cake">
-            <h4>🎂 Birthday Cakes</h4>
-            <p>Beautiful custom cakes made to make your birthday unforgettable.</p>
-        </div>
-        <div class="card">
-            <img src="{{ url_for('static', filename='images/wedding.jpg') }}" alt="Wedding Cake">
-            <h4>💍 Wedding Cakes</h4>
-            <p>Elegant and delicious wedding cakes for your special day.</p>
-        </div>
-        <div class="card">
-            <img src="{{ url_for('static', filename='images/cupcake.jpg') }}" alt="Cupcakes">
-            <h4>🧁 Cupcakes</h4>
-            <p>Soft, sweet and perfectly baked cupcakes in various flavors.</p>
-        </div>
-        <div class="card">
-            <img src="{{ url_for('static', filename='images/pastries.jpg') }}" alt="Pastries">
-            <h4>🥐 Pastries</h4>
-            <p>Freshly baked pastries made with love and premium ingredients.</p>
-        </div>
+    <!-- SECOND HEADER -->
+    <div class="main-header">
+        <div class="motto">A Taste of Heart ❤️</div>
+        <div class="quote">"Baked with love, shared with joy."</div>
     </div>
-</section>
 
-<footer>
-    <p>📞 WhatsApp Orders: 
-        <a href="https://wa.me/2349127929470?text=Hello%20I%20want%20to%20place%20an%20order" target="_blank">
-            +2349127929470
-        </a>
-    </p>
-</footer>
+    <!-- SIDE MENU -->
+    <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </div>
 
-<!-- JavaScript -->
-<script>
-function openMenu() {
-    document.getElementById("topMenu").style.height = "200px"; // adjust height as needed
-}
+    <!-- CONTENT SECTION -->
+    <section>
+        <h3>Our Specialties</h3>
+        <div class="card-container">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/birthday.jpg') }}" alt="Birthday Cake">
+                <h4>🎂 Birthday Cakes</h4>
+                <p>Beautiful custom cakes made to make your birthday unforgettable.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/wedding.jpg') }}" alt="Wedding Cake">
+                <h4>💍 Wedding Cakes</h4>
+                <p>Elegant and delicious wedding cakes for your special day.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/cupcake.jpg') }}" alt="Cupcakes">
+                <h4>🧁 Cupcakes</h4>
+                <p>Soft, sweet and perfectly baked cupcakes in various flavors.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/pastries.jpg') }}" alt="Pastries">
+                <h4>🥐 Pastries</h4>
+                <p>Freshly baked pastries made with love and premium ingredients.</p>
+            </div>
+        </div>
+    </section>
 
-function closeMenu() {
-    document.getElementById("topMenu").style.height = "0";
-}
-</script>
+    <!-- FOOTER -->
+    <footer>
+        <p>📞 WhatsApp Orders: 
+            <a href="https://wa.me/2349127929470?text=Hello%20I%20want%20to%20place%20an%20order" target="_blank">
+                +2349127929470
+            </a>
+        </p>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        function openMenu() {
+            document.getElementById("sideMenu").style.width = "250px"; // small sidebar from left
+        }
+        function closeMenu() {
+            document.getElementById("sideMenu").style.width = "0";
+        }
+    </script>
 
 </body>
 </html>
