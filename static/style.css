@@ -1,4 +1,4 @@
-/* BODY */
+i/* BODY */
 body {
     font-family: sans-serif;
     background-color: #fff6f0;
@@ -58,16 +58,27 @@ header {
     background-color: #f3d4cd; /* subtle hover */
 }
 
-/* CLOSE BUTTON */
+/* CLOSE BUTTON AS BOX */
 .close-btn {
     position: absolute;
     top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: #6D0100; /* visible on light background */
+    right: 20px;
+    font-size: 30px;              /* smaller than before for a nicer box */
+    color: #6D0100;               /* dark red text */
+    background-color: white;       /* box background */
+    border: 2px solid #6D0100;    /* border around the box */
+    border-radius: 8px;            /* rounded corners */
+    padding: 5px 10px;             /* space inside the box */
     cursor: pointer;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
 }
 
+/* Hover effect */
+.close-btn:hover {
+    background-color: #6D0100;     /* box fills with dark red */
+    color: white;                  /* text becomes white */
+}
 /* SECTION */
 section {
     padding: 30px 20px;
@@ -132,5 +143,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
 
 
