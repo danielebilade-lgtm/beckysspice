@@ -82,7 +82,25 @@ body {
     margin: 0;
     color: #fff;
 }
+/* ---------------- HEADER BUTTON ---------------- */
+.header-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 30px;
+    background-color: #fff6f0;   /* cream */
+    color: #6D0100;              /* deep red text */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
 
+.header-btn:hover {
+    background-color: #8C2B1F;   /* brighter red */
+    color: #ffffff;
+    transform: translateY(-3px);
+}
 /* ---------------- SECTION ---------------- */
 section {
     padding: 30px 20px;
@@ -185,6 +203,7 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     }}
+
 
 
 
