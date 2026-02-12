@@ -7,16 +7,18 @@
 <body>
 
 <header>
-    <h1>Welcome 🤗</h1>
-    <h2>Becky's Spice</h2>
-    <p>A Taste of Heart ❤️</p>
+    <div class="header-left">
+        <h1>Becky's Spice</h1>
+        <p class="motto">A Taste of Heart ❤️</p>
+        <p class="quote">“Baking happiness, one bite at a time.”</p>
+    </div>
 
     <!-- Menu Icon -->
     <div class="menu-icon" onclick="openMenu()">☰</div>
 </header>
 
-<!-- Side Menu -->
-<div id="sideMenu" class="side-menu">
+<!-- Top Sliding Menu -->
+<div id="topMenu" class="top-menu">
     <!-- Close Button -->
     <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
 
@@ -28,26 +30,22 @@
 
 <section>
     <h3>Our Specialties</h3>
-
     <div class="card-container">
         <div class="card">
             <img src="{{ url_for('static', filename='images/birthday.jpg') }}" alt="Birthday Cake">
             <h4>🎂 Birthday Cakes</h4>
             <p>Beautiful custom cakes made to make your birthday unforgettable.</p>
         </div>
-
         <div class="card">
             <img src="{{ url_for('static', filename='images/wedding.jpg') }}" alt="Wedding Cake">
             <h4>💍 Wedding Cakes</h4>
             <p>Elegant and delicious wedding cakes for your special day.</p>
         </div>
-
         <div class="card">
             <img src="{{ url_for('static', filename='images/cupcake.jpg') }}" alt="Cupcakes">
             <h4>🧁 Cupcakes</h4>
             <p>Soft, sweet and perfectly baked cupcakes in various flavors.</p>
         </div>
-
         <div class="card">
             <img src="{{ url_for('static', filename='images/pastries.jpg') }}" alt="Pastries">
             <h4>🥐 Pastries</h4>
@@ -67,11 +65,11 @@
 <!-- JavaScript -->
 <script>
 function openMenu() {
-    document.getElementById("sideMenu").style.width = "100%"; /* full screen */
+    document.getElementById("topMenu").style.height = "200px"; // adjust height as needed
 }
 
 function closeMenu() {
-    document.getElementById("sideMenu").style.width = "0";     /* hide */
+    document.getElementById("topMenu").style.height = "0";
 }
 </script>
 
