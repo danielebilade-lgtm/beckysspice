@@ -32,35 +32,40 @@ body {
     cursor: pointer;
 }
 
-/* ---------------- DROPDOWN MENU (slides from top) ---------------- */
+/* ---------------- DROPDOWN MENU (under sticky header) ---------------- */
 .side-menu {
     position: absolute;
-    top: 100%;
+    top: 60px; /* height of your top header */
     left: 0;
     width: 100%;
     background-color: #fff6f0;
-    border-bottom: 2px solid #8C2B1F;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s ease;
     z-index: 999;
 }
 
+/* When active */
 .side-menu.active {
-    max-height: 300px;
+    max-height: 400px;
 }
 
+/* Menu links */
 .side-menu a {
     display: block;
-    padding: 18px;
-    font-size: 20px;
+    padding: 18px 25px;
+    font-size: 18px;
     color: #6D0100;
     text-decoration: none;
-    border-top: 1px solid #8C2B1F;
-    text-align: center;
-    transition: background 0.3s;
+    text-align: left; /* 👈 align left */
 }
 
+/* Remove ugly lines */
+.side-menu a {
+    border: none;
+}
+
+/* Hover effect */
 .side-menu a:hover {
     background-color: #f3d4cd;
 }
@@ -145,3 +150,4 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     }
+
