@@ -135,15 +135,45 @@ section h3 {
 /* ---------------- CONTACT SECTION ---------------- */
 .contact-section {
     background-color: #f3d4cd;
-    padding: 30px 20px;
-    text-align: center;
+    padding: 40px 20px;
+    text-align: left;   /* changed from center to left */
+    border-top: 2px solid #6D0100;
 }
+
+.contact-section h3 {
+    color: #6D0100;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.contact-section p {
+    margin: 12px 0;
+    font-size: 16px;
+    color: #6D0100;
+}
+
+.contact-section i {
+    margin-right: 10px;
+    width: 20px;          /* keeps icons aligned */
+    color: #6D0100;
+}
+
+.contact-section a {
+    color: #6D0100;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+    }
 
 /* ---------------- FOOTER ---------------- */
 footer {
     background-color: #6D0100; /* same as top header */
     color: #fff6f0;
     padding: 20px 15px;
+    text-align: center;
     font-size: 10px;
 }
 
@@ -156,4 +186,5 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     }}
+
 
