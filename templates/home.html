@@ -12,19 +12,19 @@
         <div class="menu-icon" onclick="openMenu()">☰</div>
     </div>
 
-    <!-- SECOND HEADER (Scrolls Away) -->
-    <div class="main-header">
-        <h1 class="motto">A Taste of Heart ❤️</h1>
-        <p class="quote">"Baked with love, shared with joy."</p>
-    </div>
-
-    <!-- SIDE MENU -->
+    <!-- SIDE MENU (Dropdown from top) -->
     <div id="sideMenu" class="side-menu">
-        <span class="close-btn" onclick="closeMenu()">×</span>
+        <a href="javascript:void(0)" onclick="closeMenu()">✕ Close</a>
         <a href="/">Home</a>
         <a href="#specialties">Our Specialties</a>
         <a href="https://wa.me/2349127929470?text=Hello%20I%20want%20to%20place%20an%20order" target="_blank">Order Now</a>
         <a href="#contact">Contact</a>
+    </div>
+
+    <!-- SECOND HEADER (Scrolls Away) -->
+    <div class="main-header">
+        <h1 class="motto">A Taste of Heart ❤️</h1>
+        <p class="quote">"Baked with love, shared with joy."</p>
     </div>
 
     <!-- CONTENT SECTION -->
@@ -62,7 +62,7 @@
     <!-- CONTACT SECTION -->
     <section id="contact">
         <h3>Contact Us</h3>
-        <p>📍 Amassoma & Yenegoa, Delta State</p>
+        <p>📍 Warri, Delta State</p>
         <p>📞 WhatsApp:
             <a href="https://wa.me/2349127929470?text=Hello%20I%20want%20to%20place%20an%20order" target="_blank">
                 +2349127929470
@@ -72,17 +72,17 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2026 Dk Innovates. All rights reserved.</p>
+        <p>© 2026 Becky's Spice. All rights reserved.</p>
     </footer>
 
-    <!-- JAVASCRIPT FOR SLIDING MENU -->
+    <!-- JAVASCRIPT FOR DROPDOWN MENU -->
     <script>
         function openMenu() {
-            document.getElementById("sideMenu").style.width = "250px";
+            document.getElementById("sideMenu").classList.add("active");
         }
 
         function closeMenu() {
-            document.getElementById("sideMenu").style.width = "0";
+            document.getElementById("sideMenu").classList.remove("active");
         }
     </script>
 
