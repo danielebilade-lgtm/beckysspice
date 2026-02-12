@@ -10,50 +10,47 @@
     <h1>Welcome 🤗</h1>
     <h2>Becky's Spice</h2>
     <p>A Taste of Heart ❤️</p>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="openMenu()">☰</div>
 </header>
 
-<nav>
+<!-- Side Menu -->
+<div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
-</nav>
+</div>
 
 <section>
     <h3>Our Specialties</h3>
 
     <div class="card-container">
         
-<div class="card">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/birthday.jpg') }}" alt="Birthday Cake">
+            <h4>🎂 Birthday Cakes</h4>
+            <p>Beautiful custom cakes made to make your birthday unforgettable.</p>
+        </div>
 
-    <img src="{{ url_for('static', filename='images/birthday.jpg') }}" alt="Birthday Cake">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/wedding.jpg') }}" alt="Wedding Cake">
+            <h4>💍 Wedding Cakes</h4>
+            <p>Elegant and delicious wedding cakes for your special day.</p>
+        </div>
 
-    <h4>🎂 Birthday Cakes</h4>
-    <p>Beautiful custom cakes made to make your birthday unforgettable.</p>
-</div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/cupcake.jpg') }}" alt="Cupcakes">
+            <h4>🧁 Cupcakes</h4>
+            <p>Soft, sweet and perfectly baked cupcakes in various flavors.</p>
+        </div>
 
-<div class="card">
-
-    <img src="{{ url_for('static', filename='images/wedding.jpg') }}" alt="Wedding Cake">
-
-    <h4>💍 Wedding Cakes</h4>
-    <p>Elegant and delicious wedding cakes for your special day.</p>
-</div>
-
-<div class="card">
-
-    <img src="{{ url_for('static', filename='images/cupcake.jpg') }}" alt="Cupcakes">
-
-    <h4>🧁 Cupcakes</h4>
-    <p>Soft, sweet and perfectly baked cupcakes in various flavors.</p>
-</div>
-
-<div class="card">
-
-    <img src="{{ url_for('static', filename='images/pastries.jpg') }}" alt="Pastries">
-
-    <h4>🥐 Pastries</h4>
-    <p>Freshly baked pastries made with love and premium ingredients.</p>
-</div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/pastries.jpg') }}" alt="Pastries">
+            <h4>🥐 Pastries</h4>
+            <p>Freshly baked pastries made with love and premium ingredients.</p>
+        </div>
 
     </div>
 </section>
@@ -66,6 +63,16 @@
     </p>
 </footer>
 
+<!-- JavaScript -->
+<script>
+function openMenu() {
+    document.getElementById("sideMenu").style.width = "250px";
+}
+
+function closeMenu() {
+    document.getElementById("sideMenu").style.width = "0";
+}
+</script>
+
 </body>
 </html>
-
