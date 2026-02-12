@@ -1,14 +1,14 @@
 /* ---------------- BODY ---------------- */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fff6f0; /* light cream */
+    background-color: #fff6f0;
     margin: 0;
-    color: #6D0100; /* default text dark red */
+    color: #6D0100;
 }
 
 /* ---------------- TOP HEADER ---------------- */
 .top-header {
-    background-color: #6D0100; /* deep red */
+    background-color: #6D0100;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -61,7 +61,6 @@ body {
     background-color: #f3d4cd;
 }
 
-
 /* ---------------- SECOND HEADER ---------------- */
 .main-header {
     background-color:#6D0100;
@@ -80,15 +79,16 @@ body {
     font-size: 18px;
     font-style: italic;
     margin: 0;
-    color: #fff;
+    color: white;
 }
+
 /* ---------------- HEADER BUTTON ---------------- */
 .header-btn {
     display: inline-block;
     margin-top: 25px;
     padding: 14px 30px;
-    background-color: #fff6f0;   /* cream */
-    color: #6D0100;              /* deep red text */
+    background-color: #fff6f0;
+    color: #6D0100;
     font-weight: bold;
     text-decoration: none;
     border-radius: 40px;
@@ -97,13 +97,14 @@ body {
 }
 
 .header-btn:hover {
-    background-color: #8C2B1F;   /* brighter red */
-    color: #ffffff;
+    background-color: #6D0100;
+    color: #fff6f0;
     transform: translateY(-3px);
 }
+
 /* ---------------- HOW IT WORKS ---------------- */
 .how-it-works {
-    background-color: #fff8f3;
+    background-color: #fff6f0;
     padding: 50px 20px;
     text-align: center;
 }
@@ -151,7 +152,8 @@ body {
     line-height: 1.6;
     color: #6D0100;
 }
-/* ---------------- SECTION ---------------- */
+
+/* ---------------- SECTIONS & CARDS ---------------- */
 section {
     padding: 30px 20px;
     text-align: center;
@@ -170,7 +172,7 @@ section h3 {
 }
 
 .card {
-    background-color: white;
+    background-color: #fff6f0;
     width: 250px;
     padding: 20px;
     border-radius: 15px;
@@ -200,9 +202,10 @@ section h3 {
 .card:hover {
     transform: translateY(-5px);
 }
+
 /* ---------------- TESTIMONIALS ---------------- */
 .testimonials {
-    background-color:  #fff6f0;
+    background-color: #fff6f0;
     padding: 50px 20px;
     text-align: center;
 }
@@ -221,7 +224,7 @@ section h3 {
 }
 
 .testimonial-card {
-    background-color: white;
+    background-color: #fff6f0;
     width: 300px;
     padding: 25px;
     border-radius: 15px;
@@ -241,11 +244,12 @@ section h3 {
     font-size: 14px;
     color: #6D0100;
 }
-/* ---------------- CONTACT SECTION ---------------- */
+
+/* ---------------- CONTACT ---------------- */
 .contact-section {
     background-color: #f3d4cd;
     padding: 40px 20px;
-    text-align: left;   /* changed from center to left */
+    text-align: left;
 }
 
 .contact-section h3 {
@@ -262,7 +266,7 @@ section h3 {
 
 .contact-section i {
     margin-right: 10px;
-    width: 20px;          /* keeps icons aligned */
+    width: 20px;
     color: #6D0100;
 }
 
@@ -274,11 +278,11 @@ section h3 {
 
 .contact-section a:hover {
     text-decoration: underline;
-    }
+}
 
 /* ---------------- FOOTER ---------------- */
 footer {
-    background-color: #6D0100; /* same as top header */
+    background-color: #6D0100;
     color: #fff6f0;
     padding: 20px 15px;
     text-align: center;
@@ -293,12 +297,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-    }}
-
-
-
-
-
-
-
-
+    }
