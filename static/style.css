@@ -152,7 +152,7 @@ section h3 {
 }
 /* ---------------- TESTIMONIALS ---------------- */
 .testimonials {
-    background-color: #fff;
+    background-color:  #fff6f0;
     padding: 50px 20px;
     text-align: center;
 }
@@ -171,7 +171,7 @@ section h3 {
 }
 
 .testimonial-card {
-    background-color: #fff6f0;
+    background-color: white;
     width: 300px;
     padding: 25px;
     border-radius: 15px;
@@ -244,6 +244,7 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     }}
+
 
 
 
