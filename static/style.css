@@ -91,7 +91,7 @@ body {
 /* ---------------- SECTION ---------------- */
 section {
     padding: 30px 20px;
-    text-align: center; /* center the heading and cards */
+    text-align: center; /* center headings and cards */
 }
 
 section h3 {
@@ -113,7 +113,7 @@ section h3 {
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    text-align: center; /* center text in card */
+    text-align: center; /* center text in cards */
 }
 
 .card img {
@@ -136,15 +136,44 @@ section h3 {
     transform: translateY(-5px);
 }
 
+/* ---------------- CONTACT SECTION ---------------- */
+#contact {
+    background-color: #28363D; /* dark grey-blue */
+    color: #fff;               /* white text */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contact h3 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+#contact p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+#contact a {
+    color: #6D0100; /* burgundy brand color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #fff6f0; /* highlight on hover using cream from palette */
+}
+
 /* ---------------- FOOTER ---------------- */
 footer {
     background-color: #6D0100;
     color: white;
     padding: 15px;
     border-radius: 15px 15px 0 0;
-    text-align: center; /* center everything in footer */
-    font-size: 14px; /* slightly smaller */
-    opacity: 0.7; /* make all rights reserved less visible */
+    text-align: center;      /* center everything in footer */
+    font-size: 10px;         /* slightly smaller for less emphasis */
+    opacity: 0.7;            /* less visible for "All rights reserved" */
 }
 
 footer a {
@@ -155,4 +184,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
+    }
