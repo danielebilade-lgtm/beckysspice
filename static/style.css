@@ -58,26 +58,27 @@ header {
     background-color: #f3d4cd; /* subtle hover */
 }
 
-/* CLOSE BUTTON AS BOX */
+/* CLOSE BUTTON SQUARE */
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;              /* smaller than before for a nicer box */
-    color: #6D0100;               /* dark red text */
-    background-color: white;       /* box background */
-    border: 2px solid #6D0100;    /* border around the box */
-    border-radius: 8px;            /* rounded corners */
-    padding: 5px 10px;             /* space inside the box */
+    top: 20px;                   /* distance from top */
+    right: 20px;                 /* distance from right */
+    width: 40px;                 /* square width */
+    height: 40px;                /* square height */
+    font-size: 24px;             /* size of the "×" */
+    line-height: 40px;           /* vertically center the × */
+    color: #6D0100;              /* text color (dark red) */
+    background-color: white;     /* box background */
+    border: 2px solid #6D0100;  /* border around the box */
+    text-align: center;          /* center the × horizontally */
     cursor: pointer;
-    text-align: center;
     transition: background 0.3s, color 0.3s;
 }
 
 /* Hover effect */
 .close-btn:hover {
-    background-color: #6D0100;     /* box fills with dark red */
-    color: white;                  /* text becomes white */
+    background-color: #6D0100;   /* box fills with dark red */
+    color: white;                /* × turns white */
 }
 /* SECTION */
 section {
@@ -143,6 +144,7 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
 
 
 
