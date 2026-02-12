@@ -154,4 +154,7 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     }
+footer {
+    background-color: #6D0100 !important;
+}
 
