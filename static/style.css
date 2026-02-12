@@ -72,7 +72,7 @@ body {
 
 /* ---------------- SECOND HEADER (scrollable big motto) ---------------- */
 .main-header {
-    background-color: #fff6f0;
+    background-color:#6D0100;
     padding: 50px 20px 30px 20px;
 }
 
@@ -150,4 +150,5 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     }
+
 
