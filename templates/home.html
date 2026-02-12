@@ -17,7 +17,10 @@
 
 <!-- Side Menu -->
 <div id="sideMenu" class="side-menu">
+    <!-- Close Button -->
     <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
+
+    <!-- Menu Links -->
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
@@ -27,7 +30,6 @@
     <h3>Our Specialties</h3>
 
     <div class="card-container">
-        
         <div class="card">
             <img src="{{ url_for('static', filename='images/birthday.jpg') }}" alt="Birthday Cake">
             <h4>🎂 Birthday Cakes</h4>
@@ -51,7 +53,6 @@
             <h4>🥐 Pastries</h4>
             <p>Freshly baked pastries made with love and premium ingredients.</p>
         </div>
-
     </div>
 </section>
 
@@ -73,11 +74,6 @@ function closeMenu() {
     document.getElementById("sideMenu").style.width = "0";     /* hide */
 }
 </script>
-function closeMenu() {
-    document.getElementById("sideMenu").style.width = "0";
-}
-</script>
 
 </body>
 </html>
-
