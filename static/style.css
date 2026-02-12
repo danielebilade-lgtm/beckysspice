@@ -1,48 +1,82 @@
 /* ---------------- BODY ---------------- */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fff6f0;  /* light cream */
+    background-color: #fff6f0;
     margin: 0;
-    color: #6D0100;             /* dark red text */
+    color: #6D0100;
 }
 
-/* ---------------- TOP HEADER (sticky) ---------------- */
+/* ---------------- TOP HEADER (sticky small header) ---------------- */
 .top-header {
-    background-color: #6D0100; /* deep red/burgundy */
+    background-color: #6D0100; /* deep red */
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Brand name */
 .top-header .brand {
     font-size: 20px;
     font-weight: bold;
 }
 
+/* Hamburger menu */
 .menu-icon {
     font-size: 28px;
     cursor: pointer;
 }
 
-/* ---------------- SECOND HEADER (scrollable) ---------------- */
-.main-header {
-    background-color: #fff6f0; /* light cream */
+/* ---------------- DROPDOWN MENU (slides from top) ---------------- */
+.side-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff6f0;
+    border-bottom: 2px solid #8C2B1F;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    z-index: 999;
+}
+
+.side-menu.active {
+    max-height: 300px;
+}
+
+.side-menu a {
+    display: block;
+    padding: 18px;
+    font-size: 20px;
     color: #6D0100;
-    padding: 40px 20px 20px 20px;
+    text-decoration: none;
+    border-top: 1px solid #8C2B1F;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: #f3d4cd;
+}
+
+/* ---------------- SECOND HEADER (scrollable big motto) ---------------- */
+.main-header {
+    background-color: #fff6f0;
+    padding: 50px 20px 30px 20px;
 }
 
 .main-header .motto {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: bold;
     margin: 0 0 10px 0;
+    color: #8C2B1F;
     line-height: 1.2;
-    color: #8C2B1F;  /* medium red */
 }
 
 .main-header .quote {
@@ -50,58 +84,6 @@ body {
     font-style: italic;
     margin: 0;
     color: #8C2B1F;
-}
-
-/* ---------------- SIDE MENU ---------------- */
-.side-menu {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fff6f0; /* light cream */
-    border-left: 2px solid #8C2B1F; /* medium red border */
-    overflow-x: hidden;
-    transition: width 0.4s;
-    z-index: 1001;
-    padding-top: 60px;
-}
-
-.side-menu a {
-    display: block;
-    padding: 20px;
-    font-size: 24px;
-    color: #6D0100;   /* dark red text */
-    text-decoration: none;
-    border-bottom: 1px solid #8C2B1F; /* medium red separator */
-    transition: background 0.3s;
-}
-
-.side-menu a:hover {
-    background-color: #f3d4cd; /* subtle hover */
-}
-
-/* CLOSE BUTTON */
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    line-height: 40px;
-    text-align: center;
-    color: #6D0100;
-    background-color: white;
-    border: 2px solid #8C2B1F;
-    cursor: pointer;
-    z-index: 1002;
-    transition: background 0.3s, color 0.3s;
-}
-
-.close-btn:hover {
-    background-color: #8C2B1F;
-    color: white;
 }
 
 /* ---------------- SECTION ---------------- */
@@ -148,7 +130,7 @@ section {
 
 /* ---------------- FOOTER ---------------- */
 footer {
-    background-color: #6D0100; /* deep red */
+    background-color: #6D0100;
     color: white;
     padding: 15px;
     border-radius: 15px 15px 0 0;
@@ -162,4 +144,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
+    }
