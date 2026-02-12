@@ -138,7 +138,6 @@ section h3 {
     background-color: #f3d4cd;
     padding: 30px 20px;
     text-align: center;
-    border-top: 1px solid #6D0100;
 }
 
 /* ---------------- FOOTER ---------------- */
@@ -146,7 +145,6 @@ footer {
     background-color: #6D0100; /* same as top header */
     color: #fff6f0;
     padding: 20px 15px;
-    border-radius: 15px 15px 0 0;
     text-align: center;
     font-size: 10px;
 }
@@ -248,6 +246,7 @@ footer a:hover {
 footer {
     background-color: #6D0100 !important;
 }
+
 
 
 
