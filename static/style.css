@@ -69,7 +69,7 @@ body {
 }
 
 .main-header .motto {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     margin: 0 0 10px 0;
     color: white;
@@ -186,5 +186,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     }}
+
 
 
