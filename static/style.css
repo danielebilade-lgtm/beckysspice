@@ -150,6 +150,47 @@ section h3 {
 .card:hover {
     transform: translateY(-5px);
 }
+/* ---------------- TESTIMONIALS ---------------- */
+.testimonials {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h3 {
+    font-size: 26px;
+    margin-bottom: 40px;
+    color: #6D0100;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.testimonial-card {
+    background-color: #fff6f0;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+    position: relative;
+}
+
+.testimonial-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.testimonial-card span {
+    font-weight: bold;
+    font-size: 14px;
+    color: #6D0100;
+}
 /* ---------------- CONTACT SECTION ---------------- */
 .contact-section {
     background-color: #f3d4cd;
@@ -203,6 +244,7 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     }}
+
 
 
 
