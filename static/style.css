@@ -26,38 +26,46 @@ header {
     color: white;
 }
 
-/* SIDE MENU */
+/* SIDE MENU FULLSCREEN */
 .side-menu {
     height: 100%;
-    width: 0;
+    width: 0; /* closed by default */
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #fff6f0; /* match your main background */
-    border-right: 2px solid #6D0100; /* outline so it’s visible */
+    background-color: #fff6f0; /* same as main background */
+    border-right: 2px solid #6D0100; /* outline */
     overflow-x: hidden;
     transition: 0.4s;
-    padding-top: 60px;
+    z-index: 1000; /* make sure it’s on top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
 .side-menu a {
-    padding: 15px 30px;
+    padding: 20px 0;
     text-decoration: none;
-    font-size: 18px;
-    color: #6D0100; /* dark red links */
-    display: block;
+    font-size: 24px;
+    color: #6D0100; /* dark red for visibility */
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #6D0100; /* optional separator */
+    transition: background 0.3s;
 }
 
 .side-menu a:hover {
-    background-color: #f3d4cd; /* light hover effect */
+    background-color: #f3d4cd; /* subtle hover */
 }
 
 /* CLOSE BUTTON */
 .close-btn {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 30px;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #6D0100; /* visible on light background */
+    cursor: pointer;
 }
 
 /* SECTION */
@@ -124,4 +132,5 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
 
