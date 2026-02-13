@@ -7,46 +7,22 @@ body {
     color: #6D0100;
 }
 
-/* ---------------- SHARED HEADER IMAGE + OVERLAY ---------------- */
-.top-header,
-.main-header {
+/* ---------------- HERO WRAPPER (Shared Background Section) ---------------- */
+.hero-wrapper {
     position: relative;
     background-image: url("../static/images/header-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
-    transition: background 0.6s ease, background-color 0.6s ease;
 }
 
 /* DARK RED OVERLAY */
-.top-header::before,
-.main-header::before {
+.hero-wrapper::before {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(109, 1, 0, 0.75);
     z-index: 0;
-}
-
-/* Keep content above overlay */
-.top-header *,
-.main-header * {
-    position: relative;
-    z-index: 1;
-}
-
-/* When user scrolls */
-.top-header.scrolled,
-.main-header.scrolled {
-    background-image: none;
-    background-color: #6D0100;
-}
-
-/* Remove overlay when scrolled */
-.top-header.scrolled::before,
-.main-header.scrolled::before {
-    background: transparent;
 }
 
 /* ---------------- TOP HEADER ---------------- */
@@ -55,9 +31,19 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    position: sticky;
+    position: absolute; /* overlay on main header */
     top: 0;
-    z-index: 1000;
+    left: 0;
+    width: 100%;
+    color: white;
+    z-index: 2;
+    transition: background-color 0.6s ease;
+}
+
+/* Keep top header content above overlay */
+.top-header * {
+    position: relative;
+    z-index: 2;
 }
 
 .top-header .brand {
@@ -68,6 +54,64 @@ body {
 .menu-icon {
     font-size: 28px;
     cursor: pointer;
+}
+
+/* ---------------- MAIN HEADER ---------------- */
+.main-header {
+    padding: 120px 20px 60px 20px; /* leave space for top-header overlay */
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Keep main-header content above overlay */
+.main-header * {
+    position: relative;
+    z-index: 2;
+}
+
+.main-header .motto {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.main-header .quote {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* ---------------- HEADER BUTTON ---------------- */
+.header-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #fff6f0;
+    color: #6D0100;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.header-btn:hover {
+    background-color: #6D0100;
+    color: #fff6f0;
+    transform: translateY(-3px);
+}
+
+/* ---------------- SCROLL EFFECT ---------------- */
+.hero-wrapper.scrolled .top-header {
+    background-color: #6D0100;
+}
+
+.hero-wrapper.scrolled::before {
+    background: transparent;
 }
 
 /* ---------------- DROPDOWN MENU ---------------- */
@@ -293,3 +337,4 @@ footer {
     text-align: center;
     font-size: 10px;
     }
+
