@@ -107,22 +107,26 @@
         <p>© 2026 Becky's Spice. All rights reserved.</p>
     </footer>
 
-    <script>
-        function openMenu() {
-            document.getElementById("sideMenu").classList.add("active");
-        }
-        function closeMenu() {
-            document.getElementById("sideMenu").classList.remove("active");
-        }
+<script>
+    function openMenu() {
+        document.getElementById("sideMenu").classList.add("active");
+    }
+    function closeMenu() {
+        document.getElementById("sideMenu").classList.remove("active");
+    }
 
-        window.addEventListener("scroll", function() {
-            const topHeader = document.querySelector(".top-header");
-            if (window.scrollY > 50) {
-                topHeader.style.backgroundColor = "#6D0100";
-            } else {
-                topHeader.style.backgroundColor = "transparent";
-            }
-        });
-    </script>
+    // This part handles the background color change
+    window.onscroll = function() {
+        const topHeader = document.querySelector(".top-header");
+        // Check if user has scrolled more than 50px
+        if (window.pageYOffset > 50 || document.documentElement.scrollTop > 50) {
+            topHeader.classList.add("scrolled");
+        } else {
+            topHeader.classList.remove("scrolled");
+        }
+    };
+</script>
+
 </body>
 </html>
+
