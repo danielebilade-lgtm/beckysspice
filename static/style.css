@@ -1,3 +1,4 @@
+
 /* ---------------- BODY ---------------- */
 body {
     font-family: 'Arial', sans-serif;
@@ -6,14 +7,33 @@ body {
     color: #6D0100;
 }
 
-/* ---------------- SHARED HEADER IMAGE ---------------- */
+/* ---------------- SHARED HEADER IMAGE + OVERLAY ---------------- */
 .top-header,
 .main-header {
-    background-image: url("../static/images/header-bg.jpg"); /* your image */
+    position: relative;
+    background-image: url("../static/images/header-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: white;
     transition: background 0.6s ease, background-color 0.6s ease;
+}
+
+/* DARK RED OVERLAY */
+.top-header::before,
+.main-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(109, 1, 0, 0.75);
+    z-index: 0;
+}
+
+/* Keep content above overlay */
+.top-header *,
+.main-header * {
+    position: relative;
+    z-index: 1;
 }
 
 /* When user scrolls */
@@ -23,17 +43,21 @@ body {
     background-color: #6D0100;
 }
 
+/* Remove overlay when scrolled */
+.top-header.scrolled::before,
+.main-header.scrolled::before {
+    background: transparent;
+}
+
 /* ---------------- TOP HEADER ---------------- */
 .top-header {
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 20px;
+    padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .top-header .brand {
@@ -49,7 +73,7 @@ body {
 /* ---------------- DROPDOWN MENU ---------------- */
 .side-menu {
     position: fixed;
-    top: 48px;
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: #fff6f0;
@@ -70,7 +94,6 @@ body {
     font-size: 18px;
     color: #6D0100;
     text-decoration: none;
-    text-align: left;
     border-bottom: 1px solid #6D0100;
 }
 
@@ -80,15 +103,14 @@ body {
 
 /* ---------------- SECOND HEADER ---------------- */
 .main-header {
-    padding: 50px 20px 30px 20px;
-    color: white;
+    padding: 80px 20px 60px 20px;
 }
 
 .main-header .motto {
     font-size: 30px;
     font-weight: bold;
-    margin: 0 0 10px 0;
-    line-height: 1.2;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
 }
 
 .main-header .quote {
@@ -142,7 +164,6 @@ body {
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    text-align: center;
     transition: transform 0.3s ease;
 }
 
@@ -186,7 +207,6 @@ section {
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    text-align: center;
 }
 
 .card img {
@@ -195,14 +215,6 @@ section {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
-}
-
-.card h4 {
-    margin: 10px 0 5px 0;
-}
-
-.card p {
-    font-size: 14px;
 }
 
 .card:hover {
