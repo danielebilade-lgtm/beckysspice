@@ -110,16 +110,26 @@
 <script>
     function openMenu() {
         document.getElementById("sideMenu").classList.add("active");
-    }
-    function closeMenu() {
-        document.getElementById("sideMenu").classList.remove("active");
+        // This line makes the header turn red when the menu opens
+        document.querySelector(".top-header").classList.add("scrolled");
     }
 
-    // This part handles the background color change
+    function closeMenu() {
+        document.getElementById("sideMenu").classList.remove("active");
+        
+        // This part checks: if we are at the top of the page, remove the red color.
+        // If we have already scrolled down, keep it red.
+        if (window.pageYOffset <= 50) {
+            document.querySelector(".top-header").classList.remove("scrolled");
+        }
+    }
+
     window.onscroll = function() {
         const topHeader = document.querySelector(".top-header");
-        // Check if user has scrolled more than 50px
-        if (window.pageYOffset > 50 || document.documentElement.scrollTop > 50) {
+        const sideMenu = document.getElementById("sideMenu");
+
+        // Keep header red if scrolled OR if menu is open
+        if (window.pageYOffset > 50 || sideMenu.classList.contains("active")) {
             topHeader.classList.add("scrolled");
         } else {
             topHeader.classList.remove("scrolled");
@@ -129,5 +139,6 @@
 
 </body>
 </html>
+
 
 
