@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Becky's Spice</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -13,57 +16,59 @@
         <div class="menu-icon" onclick="openMenu()">☰</div>
     </div>
 
-    <!-- SIDE MENU (Dropdown from top) -->
+    <!-- SIDE MENU -->
     <div id="sideMenu" class="side-menu">
         <a href="javascript:void(0)" onclick="closeMenu()">✕ Close</a>
         <a href="/">Home</a>
         <a href="#specialties">Our Specialties</a>
-        <a href="https://wa.me/2349127929470?text=Hello%20I%20want%20to%20place%20an%20order" target="_blank" class="order-now">Order Now</a>
+        <a href="https://wa.me/2349127929470?text=Hello%20I%20want%20to%20place%20an%20order" target="_blank">Order Now</a>
         <a href="#contact">Contact</a>
     </div>
 
-<!-- SECOND HEADER -->
-<div class="main-header">
-    <h1 class="motto">
-        From My Oven to Your Table: 
-        Beautiful Cakes and Yummy Pastries Baked Just the Way You Like Them
-    </h1>
+    <!-- SECOND HEADER -->
+    <div class="main-header">
+        <h1 class="motto">
+            From My Oven to Your Table:
+            Beautiful Cakes and Yummy Pastries Baked Just the Way You Like Them
+        </h1>
 
-    <p class="quote">"A Taste of Heart ❤️."</p>
+        <p class="quote">"A Taste of Heart ❤️."</p>
 
-    <a href="https://wa.me/2349127929470?text=Hello%20I%20want%20to%20place%20an%20order" 
-       target="_blank" 
-       class="header-btn">
-        Order Now
-    </a>
-</div>
-<!-- HOW IT WORKS SECTION -->
-<section class="how-it-works">
-    <h3>How to Order Your Treats 🍰💬🚚</h3>
-
-    <div class="steps-container">
-
-        <div class="step-card">
-            <div class="step-icon">🍰</div>
-            <h4>Step 1: Browse the Menu</h4>
-            <p>Look through our delicious selection of cakes, pastries, and chops to find your favorite.</p>
-        </div>
-
-        <div class="step-card">
-            <div class="step-icon">💬</div>
-            <h4>Step 2: Chat to Order</h4>
-            <p>Click the "Order Now" button to connect directly with us on WhatsApp. Tell us what you need!</p>
-        </div>
-
-        <div class="step-card">
-            <div class="step-icon">🚚</div>
-            <h4>Step 3: We Bake & Deliver</h4>
-            <p>We get to work baking fresh. Once it’s ready, we deliver it straight to your doorstep within Bayelsa.</p>
-        </div>
-
+        <a href="https://wa.me/2349127929470?text=Hello%20I%20want%20to%20place%20an%20order"
+           target="_blank"
+           class="header-btn">
+            Order Now
+        </a>
     </div>
-</section>
-    <!-- CONTENT SECTION -->
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <h3>How to Order Your Treats 🍰💬🚚</h3>
+
+        <div class="steps-container">
+
+            <div class="step-card">
+                <div class="step-icon">🍰</div>
+                <h4>Step 1: Browse the Menu</h4>
+                <p>Look through our delicious selection of cakes, pastries, and chops to find your favorite.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-icon">💬</div>
+                <h4>Step 2: Chat to Order</h4>
+                <p>Click the "Order Now" button to connect directly with us on WhatsApp. Tell us what you need!</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-icon">🚚</div>
+                <h4>Step 3: We Bake & Deliver</h4>
+                <p>We get to work baking fresh. Once it’s ready, we deliver it straight to your doorstep within Bayelsa.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SPECIALTIES -->
     <section id="specialties">
         <h3>Our Specialties</h3>
         <div class="card-container">
@@ -94,65 +99,44 @@
 
         </div>
     </section>
-<!-- TESTIMONIALS SECTION -->
-<section class="testimonials">
-    <h3>What Our Customers Say 💬</h3>
 
-    <div class="testimonial-container">
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <h3>What Our Customers Say 💬</h3>
 
-        <div class="testimonial-card">
-            <p>
-                "The most moist and delicious cakes I’ve found in Bayelsa. 
-                You can really tell they are baked with love!"
-            </p>
-            <span>— Ebi, Amassoma</span>
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <p>"The most moist and delicious cakes I’ve found in Bayelsa. You can really tell they are baked with love!"</p>
+                <span>— Ebi, Amassoma</span>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"Becky’s Spice made my daughter's birthday unforgettable. The design was beautiful and exactly what we asked for!"</p>
+                <span>— Tari, Yenagoa</span>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"I ordered a tray of pastries for an office meeting and everyone was asking where I got them. Fresh, crunchy, and perfect."</p>
+                <span>— Samuel, Amassoma</span>
+            </div>
         </div>
+    </section>
 
-        <div class="testimonial-card">
-            <p>
-                "Becky’s Spice made my daughter's birthday unforgettable. 
-                The design was beautiful and exactly what we asked for!"
-            </p>
-            <span>— Tari, Yenagoa</span>
-        </div>
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+        <h3>OFFICE ADDRESS</h3>
 
-        <div class="testimonial-card">
-            <p>
-                "I ordered a tray of pastries for an office meeting and 
-                everyone was asking where I got them. Fresh, crunchy, and perfect."
-            </p>
-            <span>— Samuel, Amassoma</span>
-        </div>
+        <p><i class="fa-solid fa-location-dot"></i> Wilberforce Island, Amassoma, Bayelsa State</p>
 
-    </div>
-</section>
-    <!-- CONTACT SECTION -->
-<section id="contact" class="contact-section">
-    <h3>OFFICE ADDRESS</h3>
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            <a href="https://wa.me/2349127929470?text=Hello%20I%20want%20to%20place%20an%20order" target="_blank">
+                +2349127929470
+            </a>
+        </p>
 
-    <p>
-        <i class="fa-solid fa-location-dot"></i>
-        Wilberforce Island, Amassoma, Bayelsa State
-    </p>
-
-    <p>
-        <i class="fa-solid fa-phone"></i>
-        <a href="https://wa.me/2349127929470?text=Hello%20I%20want%20to%20place%20an%20order" target="_blank">
-            +2349127929470
-        </a>
-    </p>
-
-    <p>
-        <i class="fa-solid fa-envelope"></i>
-        beckysspice@gmail.com
-    </p>
-
-    <div class="social-icons">
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-</section>
+        <p><i class="fa-solid fa-envelope"></i> beckysspice@gmail.com</p>
+    </section>
 
     <!-- FOOTER -->
     <footer>
@@ -160,7 +144,7 @@
         <p>© 2026 Becky's Spice. All rights reserved.</p>
     </footer>
 
-    <!-- JAVASCRIPT FOR DROPDOWN MENU -->
+    <!-- JAVASCRIPT -->
     <script>
         function openMenu() {
             document.getElementById("sideMenu").classList.add("active");
@@ -169,13 +153,21 @@
         function closeMenu() {
             document.getElementById("sideMenu").classList.remove("active");
         }
+
+        /* SCROLL COLOR CHANGE */
+        window.addEventListener("scroll", function() {
+            const topHeader = document.querySelector(".top-header");
+            const mainHeader = document.querySelector(".main-header");
+
+            if (window.scrollY > 50) {
+                topHeader.classList.add("scrolled");
+                mainHeader.classList.add("scrolled");
+            } else {
+                topHeader.classList.remove("scrolled");
+                mainHeader.classList.remove("scrolled");
+            }
+        });
     </script>
 
 </body>
 </html>
-
-
-
-
-
-
