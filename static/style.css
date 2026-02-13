@@ -46,6 +46,38 @@ body {
     background-color: transparent; /* Starts see-through */
     transition: all 0.3s ease;
 }
+/* ---------------- TOP DROPDOWN MENU ---------------- */
+.side-menu {
+    position: fixed;
+    top: -100%; /* Hidden above the screen */
+    left: 0;
+    width: 100%;
+    background-color: #fff6f0;
+    transition: top 0.4s ease; /* Slide down effect */
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 20px 0; /* Space for the top bar */
+}
+
+.side-menu.active {
+    top: 0; /* Drops down into view */
+}
+
+.side-menu a {
+    display: block;
+    padding: 15px 25px;
+    font-size: 18px;
+    color: #6D0100;
+    text-decoration: none;
+    border-bottom: 1px solid #f3d4cd;
+    text-align: center;
+}
+
+.side-menu a:hover {
+    background-color: #f3d4cd;
+}
 
 /* Add this right below it - This is the magic part! */
 .top-header.scrolled {
@@ -195,30 +227,3 @@ footer {
     text-align: center;
     font-size: 11px;
 }
-
-/* ---------------- SIDE MENU ---------------- */
-.side-menu {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background: #fff6f0;
-    z-index: 1000;
-    transition: 0.4s;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-}
-
-.side-menu.active {
-    right: 0;
-}
-
-.side-menu a {
-    display: block;
-    padding: 20px;
-    color: #6D0100;
-    text-decoration: none;
-    border-bottom: 1px solid #f3d4cd;
-}
-
-
