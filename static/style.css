@@ -32,19 +32,20 @@ body {
 
 /* ---------------- DROPDOWN MENU ---------------- */
 .side-menu {
-    position: absolute;
-    top: 60px;
+    position: fixed;      /* sticks to viewport while scrolling */
+    top: 48px;            /* adjust to match your top-header height */
     left: 0;
     width: 100%;
     background-color: #fff6f0;
     overflow: hidden;
-    max-height: 0;
+    max-height: 0;        /* collapsed by default */
     transition: max-height 0.4s ease;
-    z-index: 999;
+    z-index: 999;         /* below top-header but above page content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional subtle shadow */
 }
 
 .side-menu.active {
-    max-height: 400px;
+    max-height: 400px;    /* expanded height */
 }
 
 .side-menu a {
@@ -54,7 +55,7 @@ body {
     color: #6D0100;
     text-decoration: none;
     text-align: left;
-    border: none;
+    border-bottom: 1px solid #6D0100;
 }
 
 .side-menu a:hover {
@@ -298,3 +299,4 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     }
+
