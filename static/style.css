@@ -186,7 +186,7 @@ body {
 /* ---------------- HOW IT WORKS ---------------- */
 .how-it-works {
     background-color: #fff6f0;
-    padding: 50px 20px;
+    padding: 20px 20px 50px 20px; /* Top Right Bottom Left */
     text-align: center;
 }
 
@@ -268,7 +268,7 @@ section {
 /* ---------------- TESTIMONIALS ---------------- */
 .testimonials {
     background-color: #fff6f0;
-    padding: 50px 20px;
+    padding: 50px 20px 20px 20px; /* Top Right Bottom Left */
 }
 
 .testimonial-container {
@@ -301,7 +301,7 @@ section {
 /* ---------------- CONTACT ---------------- */
 .contact-section {
     background-color: #f3d4cd;
-    padding: 40px 20px;
+    padding: 20px 20px 40px 20px; /* Top Right Bottom Left */
     text-align: left;
 }
 
@@ -338,3 +338,5 @@ footer {
     font-size: 10px;
     }
 
+
+    
