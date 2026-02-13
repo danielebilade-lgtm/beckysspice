@@ -6,9 +6,25 @@ body {
     color: #6D0100;
 }
 
+/* ---------------- SHARED HEADER IMAGE ---------------- */
+.top-header,
+.main-header {
+    background-image: url("../static/images/header-bg.jpg"); /* your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background 0.6s ease, background-color 0.6s ease;
+}
+
+/* When user scrolls */
+.top-header.scrolled,
+.main-header.scrolled {
+    background-image: none;
+    background-color: #6D0100;
+}
+
 /* ---------------- TOP HEADER ---------------- */
 .top-header {
-    background-color: #6D0100;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -32,20 +48,20 @@ body {
 
 /* ---------------- DROPDOWN MENU ---------------- */
 .side-menu {
-    position: fixed;      /* sticks to viewport while scrolling */
-    top: 48px;            /* adjust to match your top-header height */
+    position: fixed;
+    top: 48px;
     left: 0;
     width: 100%;
     background-color: #fff6f0;
     overflow: hidden;
-    max-height: 0;        /* collapsed by default */
+    max-height: 0;
     transition: max-height 0.4s ease;
-    z-index: 999;         /* below top-header but above page content */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional subtle shadow */
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .side-menu.active {
-    max-height: 400px;    /* expanded height */
+    max-height: 400px;
 }
 
 .side-menu a {
@@ -64,15 +80,14 @@ body {
 
 /* ---------------- SECOND HEADER ---------------- */
 .main-header {
-    background-color:#6D0100;
     padding: 50px 20px 30px 20px;
+    color: white;
 }
 
 .main-header .motto {
     font-size: 30px;
     font-weight: bold;
     margin: 0 0 10px 0;
-    color: white;
     line-height: 1.2;
 }
 
@@ -80,7 +95,6 @@ body {
     font-size: 18px;
     font-style: italic;
     margin: 0;
-    color: white;
 }
 
 /* ---------------- HEADER BUTTON ---------------- */
@@ -113,7 +127,6 @@ body {
 .how-it-works h3 {
     font-size: 28px;
     margin-bottom: 40px;
-    color: #6D0100;
 }
 
 .steps-container {
@@ -144,24 +157,18 @@ body {
 
 .step-card h4 {
     font-size: 18px;
-    color: #6D0100;
     margin-bottom: 10px;
 }
 
 .step-card p {
     font-size: 15px;
     line-height: 1.6;
-    color: #6D0100;
 }
 
 /* ---------------- SECTIONS & CARDS ---------------- */
 section {
     padding: 30px 20px;
     text-align: center;
-}
-
-section h3 {
-    color: #6D0100;
 }
 
 .card-container {
@@ -192,12 +199,10 @@ section h3 {
 
 .card h4 {
     margin: 10px 0 5px 0;
-    color: #6D0100;
 }
 
 .card p {
     font-size: 14px;
-    color: #6D0100;
 }
 
 .card:hover {
@@ -208,13 +213,6 @@ section h3 {
 .testimonials {
     background-color: #fff6f0;
     padding: 50px 20px;
-    text-align: center;
-}
-
-.testimonials h3 {
-    font-size: 26px;
-    margin-bottom: 40px;
-    color: #6D0100;
 }
 
 .testimonial-container {
@@ -231,7 +229,6 @@ section h3 {
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     text-align: left;
-    position: relative;
 }
 
 .testimonial-card p {
@@ -243,7 +240,6 @@ section h3 {
 .testimonial-card span {
     font-weight: bold;
     font-size: 14px;
-    color: #6D0100;
 }
 
 /* ---------------- CONTACT ---------------- */
@@ -254,7 +250,6 @@ section h3 {
 }
 
 .contact-section h3 {
-    color: #6D0100;
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
@@ -262,17 +257,14 @@ section h3 {
 .contact-section p {
     margin: 12px 0;
     font-size: 16px;
-    color: #6D0100;
 }
 
 .contact-section i {
     margin-right: 10px;
     width: 20px;
-    color: #6D0100;
 }
 
 .contact-section a {
-    color: #6D0100;
     text-decoration: none;
     font-weight: bold;
 }
@@ -288,15 +280,4 @@ footer {
     padding: 20px 15px;
     text-align: center;
     font-size: 10px;
-}
-
-footer a {
-    color: #fff6f0;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
     }
-
