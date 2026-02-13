@@ -32,28 +32,25 @@ body {
 }
 
 /* ---------------- TOP HEADER ---------------- */
-..top-header {
+.top-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    position: fixed; /* This makes it follow the scroll */
+    position: fixed; /* Fixed so it stays at the top */
     top: 0;
     left: 0;
     width: 100%;
     color: white;
-    z-index: 1000; /* This keeps it on top of everything else */
-    transition: background-color 0.3s ease; /* Makes the color change smooth */
+    z-index: 1000;
+    background-color: transparent; /* Starts see-through */
+    transition: all 0.3s ease;
 }
 
-.top-header .brand {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.menu-icon {
-    font-size: 28px;
-    cursor: pointer;
+/* Add this right below it - This is the magic part! */
+.top-header.scrolled {
+    background-color: #6D0100 !important; /* Turns solid red on scroll */
+    padding: 10px 20px;
 }
 
 /* ---------------- MAIN HEADER ---------------- */
@@ -77,6 +74,7 @@ body {
     font-style: italic;
     margin-bottom: 25px;
 }
+
 
 /* ---------------- BUTTON ---------------- */
 .header-btn {
@@ -222,4 +220,5 @@ footer {
     text-decoration: none;
     border-bottom: 1px solid #f3d4cd;
 }
+
 
