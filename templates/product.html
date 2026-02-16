@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Product Page</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
@@ -13,13 +13,13 @@
 
         <!-- Product Image -->
         <div class="product-image">
-            <img src="../static/images/product1.jpg" alt="Product Name">
+            <img src="{{ url_for('static', filename='images/product1.jpg') }}" alt="Product Name">
         </div>
 
         <!-- Product Details -->
         <div class="product-details">
             <h1>Premium Product Name</h1>
-            <p class="price">$49.99</p>
+            <p class="price">₦49,999</p>
 
             <p class="description">
                 This is a high-quality premium product. 
