@@ -7,7 +7,10 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
+@app.route("/product")
+def product():
+    return render_template("product.html")
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
-
