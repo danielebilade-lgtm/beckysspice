@@ -1,40 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Product Page</title>
+{% extends "base.html" %}
 
-    <!-- Main Global Styles -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% block title %}Product - Becky's Spice{% endblock %}
 
-    <!-- Product Page Styles -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
-</head>
-<body>
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
+{% endblock %}
+
+{% block content %}
 
 <section class="product-page">
-
     <div class="product-container">
 
-        <!-- Product Image -->
         <div class="product-image">
             <img src="{{ url_for('static', filename='images/product1.jpg') }}" alt="Product Name">
         </div>
 
-        <!-- Product Details -->
         <div class="product-details">
             <h1>Premium Product Name</h1>
             <p class="price">₦49,999</p>
 
             <p class="description">
-                This is a high-quality premium product. 
-                Designed with elegance and durability in mind.
+                This is a high-quality premium product.
             </p>
 
             <button class="add-to-cart">Add to Cart</button>
-
         </div>
 
+    </div>
+</section>
+
+{% endblock %}
     </div>
 
 </section>
