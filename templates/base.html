@@ -12,13 +12,15 @@
 </head>
 <body>
 
-    <!-- HERO WRAPPER (Header Section) -->
-    <div class="hero-wrapper">
-        <div class="top-header">
-            <div class="brand">Becky's Spice</div>
-            <div class="menu-icon" onclick="openMenu()">☰</div>
-        </div>
+<!-- HERO SECTION (Optional per page) -->
+{% block hero %}
+<div class="hero-wrapper">
+    <div class="top-header">
+        <div class="brand">Becky's Spice</div>
+        <div class="menu-icon" onclick="openMenu()">☰</div>
     </div>
+</div>
+{% endblock %}
 
     <!-- PAGE CONTENT WILL GO HERE -->
     {% block content %}{% endblock %}
