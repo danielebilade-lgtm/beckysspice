@@ -37,14 +37,19 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    position: fixed; /* Fixed so it stays at the top */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     color: white;
     z-index: 1000;
-    background-color: transparent; /* Starts see-through */
+    background-color: transparent;
     transition: all 0.3s ease;
+}
+
+.top-header.scrolled {
+    background-color: #6D0100;
+    padding: 10px 20px;
 }
 /* ---------------- TOP DROPDOWN MENU ---------------- */
 .side-menu {
@@ -292,4 +297,5 @@ footer {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(109, 1, 0, 0.3);
 }
+
 
