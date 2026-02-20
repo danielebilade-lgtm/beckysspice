@@ -114,27 +114,34 @@
 
 {% block scripts %}
 <script>
+const topHeader = document.querySelector(".top-header");
+const sideMenu = document.getElementById("sideMenu");
+
 function openMenu() {
-    document.getElementById("sideMenu").classList.add("active");
-    document.querySelector(".top-header").classList.add("scrolled");
+    sideMenu.classList.add("active");
+    topHeader.classList.add("scrolled"); // menu open → always red
 }
 
 function closeMenu() {
-    document.getElementById("sideMenu").classList.remove("active");
-    if (window.pageYOffset <= 50) {
-        document.querySelector(".top-header").classList.remove("scrolled");
-    }
+    sideMenu.classList.remove("active");
+    updateHeaderBackground(); // recalc background when menu closes
 }
 
-window.onscroll = function() {
-    const topHeader = document.querySelector(".top-header");
-    const sideMenu = document.getElementById("sideMenu");
-
-    if (window.pageYOffset > 50 || sideMenu.classList.contains("active")) {
+function updateHeaderBackground() {
+    // If scrolled more than 80px, header turns red; else transparent
+    if (window.scrollY > 80 || sideMenu.classList.contains("active")) {
         topHeader.classList.add("scrolled");
     } else {
         topHeader.classList.remove("scrolled");
     }
-};
+}
+
+// Listen to scroll events
+window.addEventListener("scroll", updateHeaderBackground);
+
+// Initialize on page load
+updateHeaderBackground();
+</script>
 </script>
 {% endblock %}
+
