@@ -79,9 +79,8 @@ body {
     background-color: #f3d4cd;
 }
 
-/* Add this right below it - This is the magic part! */
 .top-header.scrolled {
-    background-color: #6D0100 !important; /* Turns solid red on scroll */
+    background-color: #6D0100;
     padding: 10px 20px;
 }
 
@@ -293,3 +292,4 @@ footer {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(109, 1, 0, 0.3);
 }
+
