@@ -1,24 +1,24 @@
 {% extends "base.html" %}
 
-{% block title %}Home - Becky's Spice{% endblock %}
+{% block title %}Welcome to Becky's Spice{% endblock %}
 
 {% block content %}
 <!-- HOW IT WORKS -->
 <section class="how-it-works">
-    <h3>How to Order Your Treats 🍰💬🚚</h3>
+    <h3>HOW TO PLACE AN ORDER</h3>
     <div class="steps-container">
         <div class="step-card">
-            <div class="step-icon">🍰</div>
+            <div class="step-icon"></div>
             <h4>Step 1: Browse</h4>
             <p>Look through our selection of cakes and pastries to find your favorite.</p>
         </div>
         <div class="step-card">
-            <div class="step-icon">💬</div>
+            <div class="step-icon"></div>
             <h4>Step 2: Chat</h4>
             <p>Click "Order Now" to tell us your preferences on WhatsApp.</p>
         </div>
         <div class="step-card">
-            <div class="step-icon">🚚</div>
+            <div class="step-icon"></div>
             <h4>Step 3: Enjoy</h4>
             <p>We bake it fresh and deliver it straight to your door in Bayelsa.</p>
         </div>
@@ -27,26 +27,26 @@
 
 <!-- SPECIALTIES -->
 <section id="specialties">
-    <h3>Our Specialties</h3>
+    <h3>OUR SPECIALTIES</h3>
     <div class="card-container">
         <div class="card">
-            <img src="{{ url_for('static', filename='images/birthday.jpg') }}" alt="Birthday Cake">
-            <h4>🎂 Birthday Cakes</h4>
+            <img src="{{ url_for('static', filename='images/birthday.webp') }}" alt="Birthday Cake">
+            <h4>Birthday Cakes</h4>
             <p>Custom cakes made to make your birthday unforgettable.</p>
         </div>
         <div class="card">
-            <img src="{{ url_for('static', filename='images/wedding.jpg') }}" alt="Wedding Cake">
-            <h4>💍 Wedding Cakes</h4>
+            <img src="{{ url_for('static', filename='images/wedding.webp') }}" alt="Wedding Cake">
+            <h4>Wedding Cakes</h4>
             <p>Elegant cakes for your special day.</p>
         </div>
         <div class="card">
-            <img src="{{ url_for('static', filename='images/cupcake.jpg') }}" alt="Cupcakes">
-            <h4>🧁 Cupcakes</h4>
+            <img src="{{ url_for('static', filename='images/cupcake.webp') }}" alt="Cupcakes">
+            <h4>Cupcakes</h4>
             <p>Soft and perfectly baked in various flavors.</p>
         </div>
         <div class="card">
-            <img src="{{ url_for('static', filename='images/pastries.jpg') }}" alt="Pastries">
-            <h4>🥐 Pastries</h4>
+            <img src="{{ url_for('static', filename='images/webp.jpg') }}" alt="Pastries">
+            <h4>Pastries</h4>
             <p>Freshly baked with love and premium ingredients.</p>
         </div>
     </div>
@@ -54,7 +54,7 @@
 
 <!-- TESTIMONIALS -->
 <section class="testimonials">
-    <h3>What Our Customers Say 💬</h3>
+    <h3>WHAT OUR CUSTOMER'S SAY</h3>
     <div class="testimonial-container">
         <div class="testimonial-card">
             <p>"The most moist and delicious cakes in Bayelsa. Baked with love!"</p>
@@ -70,5 +70,6 @@
         </div>
     </div>
 </section>
+
 
 {% endblock %}
